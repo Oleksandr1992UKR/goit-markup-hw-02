@@ -1,46 +1,11 @@
-/*
-універсальний селектор
-селектор елементу(тегу)
-селектор id
-селектор класу
-селектор атрибуту
-селектор нащадка
-дочірній селектор
-селектор сусіда
-*/
-
-/*універсальний селектор*/
-/*
-*{
-    margin: 0;
-}
-*/
-
-/*селектор елементу(тегу)*/
-/*h1 {
-    color: teal;
-}
-
-p {
-    color: tomato;
-}
-
-a {
-    color: pink;
-}
-*/
-
-/* ul {
+.list{
     list-style: none;
 }
-
-a {
+.link{
     text-decoration: none;
-} */
-
-/* селектор id */
-
-/* селектор класу */
-/* .text {
-        color: tomato;
-} */
+}
+body {
+    background-color: var(--,main-color);
+    font-family: "Roboto",sans-serif;
+    color: var(--main-color);
+}
