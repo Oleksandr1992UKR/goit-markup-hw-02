@@ -1,18 +1,33 @@
+
+/* задаємо CSS-змінні для кольору */
+
+:root {
+  --accent-color: #404BBF;
+  --button-text-color: #4D5AE5;
+  --primary-text-color: #2E2F42;
+  --secondary-text-color: #434455;
+  --third-text-color: #FFFFFF;
+  --fourth-text-color:#E7E9FC; 
+  --light-mode-backgrounds: #F4F4FD; 
+}
+
+/* Виносим в body наслідувальні елементи */
+
 body {
   font-family:'Roboto', sans-serif;
-  color: #2E2F42;
+  color: var(--primary-text-color);
 }
 
 /* Стилізуєм тескт Header */
 
 .header-logo {
-  font-family: 'Raleway';
+  font-family: 'Raleway',sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #2E2F42;
+  color: var(--primary-text-color);
   text-decoration: none;
   }
 
@@ -25,17 +40,17 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em; 
-    color: #2E2F42;
+    color: var(--primary-text-color);
     text-decoration: none;
   }
 
   .accent {
-    color: #404BBF;
+    color: var(--accent-color);
   }
   
   .header-link:hover,
   .header-link:focus  { 
-    color: #404BBF;
+    color: var(--accent-color);
   }
 
 .address-contact {
@@ -47,13 +62,13 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--secondary-text-color);
   text-decoration: none;
   color: inherit;
 }
 
 .link:hover,
-.link:focus {color: #404BBF;
+.link:focus {color: var(--accent-color);
 }
 
 /* Стилізуєм текст Main */
@@ -63,29 +78,30 @@ body {
 .menu-title {
   font-size: 56px;
   line-height: 1.07;
+  text-align: center;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+  color: var(--third-text-color);
 }
 
 .menu {
-  background-color: #2E2F42;
+  background-color: var(--primary-text-color);
 }
 
 .menu-btn {
-  font-family: 'Roboto';
+  font-family: 'Roboto',sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
-  background: #4D5AE5;
+  color: var(--third-text-color);
+  background: var(--button-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
   
-.menu-btn:active,
+.menu-btn:focus,
 .menu-btn:hover {
-  background-color: #404BBF;
+  background-color: var(--accent-color);
 }
 
 .btn {
@@ -105,7 +121,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--secondary-text-color);
 }
 
 /* Секція menu-gad */
@@ -113,6 +129,7 @@ body {
 .menu-gad-title {
 font-size: 36px;
 line-height: 1.1;
+text-align: center;
 letter-spacing: 0.02em;
 text-transform: capitalize;
 }
@@ -120,12 +137,13 @@ text-transform: capitalize;
 /* Стилізуєм cекцію menu-team  */
 
 .menu-team {
-  background: #F4F4FD;
+  background: var(--light-mode-backgrounds);
 }
 
 .menu-team-title {
 font-size: 36px;
 line-height: 1.1;
+text-align: center;
 letter-spacing: 0.02em;
 text-transform: capitalize;
 }
@@ -135,30 +153,30 @@ font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
-color: #2E2F42;
+color: var(--primary-text-color);
 }
 
 .menu-team-position {
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-color: #434455;
+color: var(--secondary-text-color);
 }
 
 /* Стилізуєм текст footer */
 
 .footer {
-  background-color: #2E2F42;
+  background-color: var(--primary-text-color);
 }
 
 .footer-logo {
-  font-family: 'Raleway';
+  font-family: 'Raleway',sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #F4F4FD;
+  color: var(--light-mode-backgrounds);
   text-decoration: none;
 }
 
@@ -166,26 +184,26 @@ color: #434455;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-color: #E7E9FC;
+color: var(--fourth-text-color);
 }
 
 /* Стилізуєм текст menu-nav-serv */
 
 .menu-nav-btn {
-  font-family: 'Roboto';
+  font-family: 'Roboto',sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #4D5AE5;
-  background-color:#F4F4FD;
-  border: 1px solid #E7E9FC;
+  color: var(--button-text-color);
+  background-color:var(--light-mode-backgrounds);
+  border: 1px solid var(--fourth-text-color);
   border-radius: 4px;
 }
 
 .menu-nav-btn:focus,
 .menu-nav-btn:hover{
-  color:#FFFFFF;
-  background-color: #404BBF;
+  color:var(--third-text-color);
+  background-color: var(--accent-color);
 }
 
 /* Стилізуєм menu-serv-list list */
@@ -198,9 +216,8 @@ letter-spacing: 0.02em;
 }
 
 .serv-subtitle {
-font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-color: #434455;
+color: var(--secondary-text-color);
 }
